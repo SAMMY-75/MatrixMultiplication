@@ -1,0 +1,56 @@
+#include<stdio.h>
+
+int main()
+{
+  int m, i = 0, j = 0;
+  printf("Enter size of Matrix : ");
+  scanf("%d", &m);
+  int mm[m][m], a[m][m], b[m][m];
+  printf("\nEnter elements of Matrix 1 : \n");
+  while(i < m)
+  {
+    while(j < m)
+    {
+      scanf("%d", &a[i][j]);
+      j++;
+    }
+    i++;
+  }
+  
+  printf("\nEnter elements of Matrix 1 : \n");
+  while(i < m)
+  {
+    while(j < m)
+    {
+      scanf("%d", &a[i][j]);
+      j++;
+    }
+    i++;
+  }
+  
+  while(i < m)
+  {
+    while(j < m)
+    {
+      mm[i][j] = 0;
+      while(k < m)
+      {
+        mm[i][j] += a[i][k] * b[k][j];
+        k++;
+      }
+      j++;
+    }
+    i++;
+  }
+  printf("\nMultiplication of both Matrix : \n");
+  while(i < m)
+  {
+    printf("\n");
+    while(j < m)
+    {
+      printff("\t%d", a[i][j]);
+      j++;
+    }
+    i++;
+  }
+}
